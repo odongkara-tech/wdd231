@@ -3,15 +3,98 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="styles/normalize.css">
-    <title>WDD 231 | Course Work</title>
+    <meta name="description" content="Course work and projects for WDD 231, Web Frontend Development I.">
+    <meta name="author" content="Ronald Odongkara">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles/small.css">
+    <link rel="stylesheet" href="styles/larger.css">
+    <script src="scripts/courses.js" defer></script>
+    <script src="scripts/course-display.js" defer></script>
+    <script src="scripts/navigation.js" defer></script>
+    <script src="scripts/date.js" defer></script>
+    <title>Home | WDD 231</title>
   </head>
   <body>
-    <header>
-      <h1>WDD 231</h1>
+    <header class="site-header" id="home">
+      <a class="site-brand" href="#home">
+        <img class="site-logo" src="images/site-logo.svg" alt="">
+        <span>Ronald Odongkara</span>
+      </a>
+      <button class="menu-toggle" type="button" aria-label="Open navigation menu" aria-expanded="false" aria-controls="site-nav">
+        <span class="menu-icon" aria-hidden="true"></span>
+      </button>
+      <nav class="site-nav" id="site-nav" aria-label="Main navigation">
+        <a href="#home" aria-current="page">Home</a>
+        <a href="#chamber-project">Chamber</a>
+        <a href="#final-project">Final</a>
+      </nav>
     </header>
+
     <main>
-      <p>Course work and projects will be published here.</p>
+      <h1>Home</h1>
+      <div class="intro-grid">
+        <section class="panel about-panel" aria-labelledby="about-heading">
+          <h2 class="panel-heading" id="about-heading">About Me</h2>
+          <div class="panel-content">
+            <p>I am a student in WDD 231, Web Frontend Development I. This page highlights my coursework and projects as I build skills in web development.</p>
+          </div>
+        </section>
+
+        <section class="panel photo-panel" aria-labelledby="photo-heading">
+          <h2 class="panel-heading" id="photo-heading">Student Photo</h2>
+          <div class="photo-placeholder" role="img" aria-label="Student portrait placeholder">
+            <span>Student portrait</span>
+          </div>
+        </section>
+      </div>
+
+      <section class="panel courses-panel" id="courses" aria-labelledby="courses-heading">
+        <h2 class="panel-heading" id="courses-heading">Web Certificate Courses</h2>
+        <div class="course-filters" role="group" aria-label="Filter certificate courses">
+          <button type="button" class="course-filter" data-filter="ALL" aria-pressed="true">All Courses</button>
+          <button type="button" class="course-filter" data-filter="WDD" aria-pressed="false">WDD Courses</button>
+          <button type="button" class="course-filter" data-filter="CSE" aria-pressed="false">CSE Courses</button>
+        </div>
+        <ul class="course-list" id="course-list" aria-live="polite"></ul>
+        <p class="course-total" id="course-total" aria-live="polite"></p>
+      </section>
+
+      <div class="projects-grid" aria-label="Course projects">
+        <article class="panel project-panel" id="chamber-project">
+          <h2 class="panel-heading">Chamber Project</h2>
+          <p>Project work will be added here.</p>
+        </article>
+        <article class="panel project-panel" id="final-project">
+          <h2 class="panel-heading">Final Project</h2>
+          <p>Project work will be added here.</p>
+        </article>
+      </div>
     </main>
+
+    <footer class="site-footer">
+      <nav class="social-links" aria-label="Social media">
+        <a href="https://github.com/odongkara-tech/wdd231" target="_blank" rel="noopener noreferrer" aria-label="GitHub repository">
+          <svg viewBox="0 0 24 24" aria-hidden="true">
+            <path fill="currentColor" d="M12 .9a11.1 11.1 0 0 0-3.51 21.63c.56.1.76-.24.76-.54v-2.1c-3.1.68-3.76-1.32-3.76-1.32-.5-1.29-1.23-1.63-1.23-1.63-1.01-.69.08-.68.08-.68 1.12.08 1.7 1.15 1.7 1.15.99 1.69 2.6 1.2 3.23.92.1-.72.39-1.2.7-1.48-2.48-.28-5.09-1.24-5.09-5.52 0-1.22.44-2.22 1.15-3-.12-.28-.5-1.42.11-2.96 0 0 .94-.3 3.05 1.15a10.6 10.6 0 0 1 5.55 0c2.11-1.45 3.05-1.15 3.05-1.15.61 1.54.23 2.68.11 2.96.72.78 1.15 1.78 1.15 3 0 4.29-2.61 5.23-5.1 5.51.4.35.75 1.02.75 2.06v3.08c0 .3.2.65.77.54A11.1 11.1 0 0 0 12 .9Z"/>
+          </svg>
+        </a>
+        <a href="https://www.linkedin.com/in/ronald-odongkara-54b5aa27b" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn profile">
+          <svg viewBox="0 0 24 24" aria-hidden="true">
+            <path fill="currentColor" d="M20.45 2H3.55C2.69 2 2 2.68 2 3.52v16.96c0 .84.69 1.52 1.55 1.52h16.9c.86 0 1.55-.68 1.55-1.52V3.52c0-.84-.69-1.52-1.55-1.52ZM7.93 18.9H4.96V9.34h2.97v9.56ZM6.45 8.03a1.72 1.72 0 1 1 0-3.44 1.72 1.72 0 0 1 0 3.44ZM19.04 18.9h-2.96v-4.65c0-1.11-.02-2.54-1.55-2.54-1.55 0-1.79 1.21-1.79 2.46v4.73H9.78V9.34h2.84v1.31h.04c.39-.75 1.36-1.55 2.8-1.55 3 0 3.58 1.97 3.58 4.53v5.27Z"/>
+          </svg>
+        </a>
+        <a href="https://x.com/" target="_blank" rel="noopener noreferrer" aria-label="X">
+          <svg viewBox="0 0 24 24" aria-hidden="true">
+            <path fill="currentColor" d="M18.9 2H22l-6.78 7.75L23.2 22h-6.25l-4.9-7.63L5.37 22H2.24l7.25-8.29L1.8 2h6.4l4.43 6.96L18.9 2Zm-1.1 18h1.73L7.28 3.88H5.42L17.8 20Z"/>
+          </svg>
+        </a>
+      </nav>
+      <p class="footer-copyright"><span id="copyright-symbol"></span> <span id="currentyear"></span> Ronald Odongkara | Uganda</p>
+      <p id="lastModified"></p>
+      <p class="footer-course">WDD 231 | Web Frontend Development I</p>
+    </footer>
   </body>
 </html>

@@ -1,0 +1,58 @@
+@media (min-width: 40rem) {
+  .site-header {
+    padding: 0 2rem;
+  }
+
+  .site-brand {
+    padding-right: 1.5rem;
+    padding-left: 0;
+  }
+
+  .menu-toggle,
+  .js .menu-toggle {
+    display: none;
+  }
+
+  .site-nav {
+    display: flex;
+    flex-basis: auto;
+    background-color: transparent;
+  }
+
+  .js .site-nav,
+  .js .site-nav.is-open {
+    display: flex;
+  }
+
+  .site-nav a {
+    border: 0;
+    border-radius: 0.3rem;
+  }
+
+  main {
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+  }
+
+  .intro-grid {
+    grid-template-columns: minmax(0, 2fr) minmax(14rem, 1fr);
+  }
+
+  .photo-placeholder {
+    min-height: 15rem;
+  }
+
+  .course-list {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .projects-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (min-width: 64rem) {
+  .course-list {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+}
