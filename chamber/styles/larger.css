@@ -1,0 +1,103 @@
+@media (min-width: 40rem) {
+  .site-header {
+    padding-right: max(1rem, calc((100% - 76rem) / 2));
+    padding-left: max(1rem, calc((100% - 76rem) / 2));
+  }
+
+  .menu-toggle,
+  .js .menu-toggle {
+    display: none;
+  }
+
+  .site-nav,
+  .js .site-nav,
+  .js .site-nav.is-open {
+    display: flex;
+    flex-basis: auto;
+    align-items: center;
+    gap: 0.25rem;
+    background: transparent;
+  }
+
+  .site-nav a {
+    border: 0;
+  }
+
+  .page-intro {
+    grid-template-columns: minmax(0, 1.2fr) minmax(15rem, 0.8fr);
+    min-height: 31rem;
+  }
+
+  .hero-art {
+    display: block;
+  }
+
+  .directory-tools {
+    grid-template-columns: minmax(0, 1fr) auto;
+  }
+
+  .view-controls {
+    justify-content: end;
+  }
+
+  .view-button {
+    min-width: 6rem;
+    flex: initial;
+    padding: 0.45rem 0.8rem;
+  }
+
+  .member-grid:not(.is-list) {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .member-grid.is-list .member-card {
+    grid-template-columns: 3rem minmax(0, 1fr) auto;
+    align-items: center;
+  }
+
+  .member-grid.is-list .member-logo {
+    grid-row: 1;
+  }
+
+  .member-grid.is-list .membership-level {
+    grid-column: 3;
+    grid-row: 1;
+    justify-self: end;
+  }
+
+  .member-grid.is-list .member-details {
+    grid-column: 2 / -1;
+  }
+
+  .membership-banner {
+    grid-template-columns: minmax(0, 1fr) auto;
+  }
+
+  .button {
+    justify-self: end;
+  }
+
+  .site-footer {
+    padding-right: max(1rem, calc((100% - 72rem) / 2));
+    padding-left: max(1rem, calc((100% - 72rem) / 2));
+  }
+
+  .footer-main {
+    grid-template-columns: 1fr 1fr 1fr;
+    align-items: center;
+  }
+
+  .footer-meta {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (min-width: 64rem) {
+  .hero-art {
+    width: min(100%, 27rem);
+  }
+
+  .member-grid:not(.is-list) {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+}

@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 120">
+  <rect width="120" height="120" rx="22" fill="#f3e8d8"/>
+  <circle cx="60" cy="58" r="32" fill="#c17d54"/>
+  <path d="M56 37h8v17h17v8H64v17h-8V62H39v-8h17z" fill="#fff8e9"/>
+  <path d="M31 88c10-8 18 8 29 0s19 8 29 0" fill="none" stroke="#60836a" stroke-linecap="round" stroke-width="4"/>
+  <text x="60" y="107" fill="#865135" font-family="Arial,sans-serif" font-size="8" font-weight="700" letter-spacing="1" text-anchor="middle">WANDEGEYA WELLNESS</text>
+</svg>

@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 120">
+  <rect width="120" height="120" rx="22" fill="#e4e6f4"/>
+  <path d="M60 24 91 42v36L60 96 29 78V42z" fill="none" stroke="#5d5ba1" stroke-width="4"/>
+  <circle cx="60" cy="60" r="17" fill="#5d5ba1"/>
+  <circle cx="60" cy="60" r="7" fill="#d8f36a"/>
+  <path d="M60 24v19m31-1L74 51M91 78 74 68M60 96V77M29 78l17-10M29 42l17 9" stroke="#8c88c3" stroke-width="3"/>
+  <text x="60" y="108" fill="#48477f" font-family="Arial,sans-serif" font-size="9" font-weight="700" letter-spacing="1.3" text-anchor="middle">PEARLTECH</text>
+</svg>

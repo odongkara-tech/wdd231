@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 120">
+  <rect width="120" height="120" rx="22" fill="#e5eafa"/>
+  <circle cx="81" cy="38" r="14" fill="#edc661"/>
+  <path d="M20 70 46 43l17 19 12-12 26 28H20z" fill="#596b9b"/>
+  <path d="M20 78c11-7 19 7 30 0s19 7 30 0 19 7 30 0v12H20z" fill="#80b7bd"/>
+  <text x="60" y="106" fill="#394b7b" font-family="Arial,sans-serif" font-size="9" font-weight="700" letter-spacing="1.2" text-anchor="middle">LAKEVIEW</text>
+</svg>

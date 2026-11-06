@@ -1,0 +1,74 @@
+[
+  {
+    "name": "Acacia Creative Studio",
+    "category": "Branding & Design",
+    "address": "Plot 14, Buganda Road, Kampala",
+    "phone": "+256 700 123 401",
+    "website": "https://example.com/acacia",
+    "image": "acacia-creative.svg",
+    "membershipLevel": 3
+  },
+  {
+    "name": "Bukoto Fresh Market",
+    "category": "Food & Agriculture",
+    "address": "Bukoto Street, Kampala",
+    "phone": "+256 700 123 402",
+    "website": "https://example.com/bukoto-market",
+    "image": "bukoto-market.svg",
+    "membershipLevel": 2
+  },
+  {
+    "name": "Crestline Business Services",
+    "category": "Professional Services",
+    "address": "4th Floor, Workers House, Kampala",
+    "phone": "+256 700 123 403",
+    "website": "https://example.com/crestline",
+    "image": "crestline-services.svg",
+    "membershipLevel": 3
+  },
+  {
+    "name": "Green Path Community Foundation",
+    "category": "Community & Nonprofit",
+    "address": "Kibuli Hill, Kampala",
+    "phone": "+256 700 123 404",
+    "website": "https://example.com/green-path",
+    "image": "green-path.svg",
+    "membershipLevel": 1
+  },
+  {
+    "name": "Kampala Craft House",
+    "category": "Arts & Retail",
+    "address": "Kisementi, Kamwokya, Kampala",
+    "phone": "+256 700 123 405",
+    "website": "https://example.com/craft-house",
+    "image": "kampala-craft-house.svg",
+    "membershipLevel": 1
+  },
+  {
+    "name": "Lakeview Guest House",
+    "category": "Hospitality",
+    "address": "Entebbe Road, Kampala",
+    "phone": "+256 700 123 406",
+    "website": "https://example.com/lakeview",
+    "image": "lakeview-guest-house.svg",
+    "membershipLevel": 2
+  },
+  {
+    "name": "PearlTech Solutions",
+    "category": "Technology",
+    "address": "Level 2, Plot 10, Nakasero, Kampala",
+    "phone": "+256 700 123 407",
+    "website": "https://example.com/pearltech",
+    "image": "pearltech-solutions.svg",
+    "membershipLevel": 3
+  },
+  {
+    "name": "Wandegeya Wellness Clinic",
+    "category": "Health & Wellness",
+    "address": "Bombo Road, Wandegeya, Kampala",
+    "phone": "+256 700 123 408",
+    "website": "https://example.com/wandegeya-wellness",
+    "image": "wandegeya-wellness.svg",
+    "membershipLevel": 2
+  }
+]

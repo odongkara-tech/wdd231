@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 120">
+  <rect width="120" height="120" rx="22" fill="#e1edee"/>
+  <path d="M25 79 48 44l13 17 13-24 22 42z" fill="#347782"/>
+  <path d="m25 79 18-11 16 11 18-14 32 14z" fill="#68a1a0"/>
+  <circle cx="83" cy="30" r="8" fill="#e0b750"/>
+  <text x="60" y="103" fill="#285d67" font-family="Arial,sans-serif" font-size="10" font-weight="700" letter-spacing="2" text-anchor="middle">CRESTLINE</text>
+</svg>
