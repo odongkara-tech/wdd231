@@ -51,22 +51,19 @@
   }
 
   .member-grid.is-list .member-card {
-    grid-template-columns: 3rem minmax(0, 1fr) auto;
-    align-items: center;
-  }
-
-  .member-grid.is-list .member-logo {
-    grid-row: 1;
+    grid-template-columns: minmax(0, 1fr) auto;
+    align-items: start;
   }
 
   .member-grid.is-list .membership-level {
-    grid-column: 3;
+    grid-column: 2;
     grid-row: 1;
     justify-self: end;
   }
 
   .member-grid.is-list .member-details {
-    grid-column: 2 / -1;
+    grid-column: 1 / -1;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
   }
 
   .membership-banner {
