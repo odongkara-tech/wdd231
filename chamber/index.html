@@ -1,0 +1,218 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta
+      name="description"
+      content="Welcome to the Kampala Chamber of Commerce. Connect with local businesses, discover opportunities, and grow together."
+    >
+    <meta name="author" content="Ronald Odongkara">
+    <meta name="theme-color" content="#123c35">
+    <meta property="og:type" content="website">
+    <meta property="og:locale" content="en_UG">
+    <meta property="og:site_name" content="Kampala Chamber of Commerce">
+    <meta property="og:title" content="Kampala Chamber of Commerce | Home">
+    <meta
+      property="og:description"
+      content="Connect with local businesses, find upcoming chamber events, and explore opportunities in Kampala."
+    >
+    <meta property="og:image" content="https://odongkara-tech.github.io/wdd231/chamber/images/chamber-social.png">
+    <meta property="og:image:type" content="image/png">
+    <meta property="og:image:alt" content="Kampala Chamber of Commerce — Local roots, big possibilities">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta property="og:url" content="https://odongkara-tech.github.io/wdd231/chamber/index.html">
+    <meta name="twitter:card" content="summary_large_image">
+    <link rel="canonical" href="https://odongkara-tech.github.io/wdd231/chamber/index.html">
+    <link rel="icon" href="images/favicon.svg" type="image/svg+xml">
+    <link rel="apple-touch-icon" href="images/favicon.svg">
+    <link rel="stylesheet" href="styles/normalize.css">
+    <link rel="stylesheet" href="styles/small.css">
+    <link rel="stylesheet" href="styles/larger.css">
+    <link rel="stylesheet" href="styles/home.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <script src="scripts/chamber-navigation.js" defer></script>
+    <script src="../scripts/weather-config.js" defer></script>
+    <script src="scripts/home.js" defer></script>
+    <title>Home | Kampala Chamber of Commerce</title>
+  </head>
+  <body>
+    <a class="skip-link" href="#main-content">Skip to main content</a>
+    <header class="site-header" id="top">
+      <a class="site-brand" href="index.html" aria-label="Kampala Chamber of Commerce home">
+        <span class="brand-mark" aria-hidden="true">K</span>
+        <span class="brand-copy">
+          <span class="brand-name">Kampala</span>
+          <span class="brand-subtitle">Chamber of Commerce</span>
+        </span>
+      </a>
+      <button
+        class="menu-toggle"
+        type="button"
+        aria-label="Open navigation menu"
+        aria-expanded="false"
+        aria-controls="site-nav"
+      >
+        <span class="menu-icon" aria-hidden="true"></span>
+      </button>
+      <nav class="site-nav" id="site-nav" aria-label="Main navigation">
+        <a href="index.html" aria-current="page">Home</a>
+        <a href="index.html#events-heading">Events</a>
+        <a href="directory.html">Directory</a>
+        <a class="nav-cta" href="#join-heading">Join</a>
+      </nav>
+    </header>
+
+    <main id="main-content">
+      <section class="page-intro home-hero" aria-labelledby="page-title">
+        <div class="hero-content">
+          <p class="eyebrow"><span class="eyebrow-dot" aria-hidden="true"></span> Kampala’s business community</p>
+          <h1 id="page-title">Kampala grows<br><span>when business connects.</span></h1>
+          <p class="intro-copy">
+            The Kampala Chamber of Commerce brings local businesses together to
+            build connections, share opportunities, and strengthen our community.
+          </p>
+          <div class="hero-actions">
+            <a class="text-link" href="#join-heading">Join the Chamber <span aria-hidden="true">↗</span></a>
+            <a class="hero-secondary-link" href="directory.html">Explore member businesses</a>
+          </div>
+        </div>
+        <figure class="hero-art home-hero-art">
+          <img
+            class="home-hero-image"
+            src="images/chamber-social.png"
+            alt="Kampala Chamber of Commerce: good people, great business, and local roots with big possibilities"
+            width="1200"
+            height="630"
+            fetchpriority="high"
+          >
+        </figure>
+      </section>
+
+      <div class="home-content">
+        <div class="home-overview">
+          <section class="home-panel events-panel" aria-labelledby="events-heading">
+            <div class="section-heading">
+              <div>
+                <p class="eyebrow">Meet, learn, grow</p>
+                <h2 id="events-heading">Upcoming events</h2>
+              </div>
+              <span class="panel-icon" aria-hidden="true">✳</span>
+            </div>
+            <p class="sample-note">Sample listings — check back for confirmed dates.</p>
+            <ol class="event-list">
+              <li class="event-item">
+                <time class="event-date" datetime="2026-11-26"><span>26</span> Nov</time>
+                <div>
+                  <h3>Business Connections Breakfast</h3>
+                  <p>Meet local entrepreneurs and make new connections.</p>
+                  <span class="event-meta">9:00 AM · Kampala</span>
+                </div>
+              </li>
+              <li class="event-item">
+                <time class="event-date" datetime="2026-12-03"><span>03</span> Dec</time>
+                <div>
+                  <h3>Growing Your Small Business</h3>
+                  <p>A practical session for Kampala’s small business community.</p>
+                  <span class="event-meta">10:00 AM · Kampala</span>
+                </div>
+              </li>
+              <li class="event-item">
+                <time class="event-date" datetime="2026-12-10"><span>10</span> Dec</time>
+                <div>
+                  <h3>Local Trade &amp; Partnerships Forum</h3>
+                  <p>Explore opportunities to work and grow together.</p>
+                  <span class="event-meta">2:00 PM · Kampala</span>
+                </div>
+              </li>
+            </ol>
+          </section>
+
+          <section class="home-panel weather-panel" aria-labelledby="weather-heading">
+            <div class="section-heading">
+              <div>
+                <p class="eyebrow">Kampala, Uganda</p>
+                <h2 id="weather-heading">Local weather</h2>
+              </div>
+              <span class="panel-icon weather-icon" aria-hidden="true">☀</span>
+            </div>
+            <p class="weather-temperature" id="weather-temperature" aria-live="polite">Loading…</p>
+            <p class="weather-description" id="weather-description">Fetching current conditions</p>
+            <dl class="weather-details">
+              <div>
+                <dt>Humidity</dt>
+                <dd id="weather-humidity">—</dd>
+              </div>
+              <div>
+                <dt>Wind</dt>
+                <dd id="weather-wind">—</dd>
+              </div>
+            </dl>
+            <p class="weather-updated" id="weather-updated"></p>
+            <h3 class="forecast-heading">3-day temperature forecast</h3>
+            <ol class="weather-forecast" id="weather-forecast" aria-live="polite">
+              <li>Loading forecast…</li>
+            </ol>
+            <p class="weather-source">Weather data via OpenWeatherMap</p>
+          </section>
+        </div>
+
+        <section class="spotlights-section" aria-labelledby="spotlights-heading">
+          <div class="section-heading">
+            <div>
+              <p class="eyebrow">Meet our members</p>
+              <h2 id="spotlights-heading">Business spotlights</h2>
+            </div>
+            <a class="section-link" href="directory.html">View all members <span aria-hidden="true">↗</span></a>
+          </div>
+          <div class="spotlights-grid" id="spotlights-list" aria-live="polite" aria-busy="true">
+            <p class="spotlights-message">Loading member spotlights…</p>
+          </div>
+        </section>
+
+        <section class="membership-banner" aria-labelledby="join-heading">
+          <div>
+            <p class="eyebrow">Better business, together</p>
+            <h2 id="join-heading">Be part of Kampala’s business community.</h2>
+            <p>Join the Chamber to meet fellow businesses and discover opportunities to grow.</p>
+          </div>
+          <a class="button button-light" href="#join-heading">Learn about membership</a>
+        </section>
+      </div>
+    </main>
+
+    <footer class="site-footer">
+      <div class="footer-main">
+        <a class="site-brand footer-brand" href="index.html" aria-label="Kampala Chamber of Commerce home">
+          <span class="brand-mark" aria-hidden="true">K</span>
+          <span class="brand-copy">
+            <span class="brand-name">Kampala</span>
+            <span class="brand-subtitle">Chamber of Commerce</span>
+          </span>
+        </a>
+        <section class="footer-block" aria-labelledby="footer-contact-heading">
+          <h2 id="footer-contact-heading">Contact</h2>
+          <address>
+            Kampala, Uganda<br>
+            <a href="mailto:info@kampalachamber.example">info@kampalachamber.example</a><br>
+            <a href="tel:+256700000000">+256 700 000 000</a>
+          </address>
+        </section>
+        <section class="footer-block" aria-labelledby="footer-development-heading">
+          <h2 id="footer-development-heading">Development</h2>
+          <p class="footer-course">Ronald Odongkara<br>WDD 231 | Chamber of Commerce Project</p>
+          <p class="footer-updated">
+            Last modified:
+            <time id="last-modified" datetime="2026-11-18">2026-11-18</time>
+          </p>
+        </section>
+      </div>
+      <div class="footer-meta">
+        <p>&copy; <span id="current-year"></span> Kampala Chamber of Commerce</p>
+      </div>
+    </footer>
+  </body>
+</html>
