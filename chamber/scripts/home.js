@@ -8,50 +8,45 @@ const spotlightsOutput = document.querySelector("#spotlights-list");
 const currentYearOutput = document.querySelector("#current-year");
 const lastModifiedOutput = document.querySelector("#last-modified");
 
-const weatherApiBase = "https://api.openweathermap.org/data/2.5";
-const locationQuery = "lat=0.3476&lon=32.5825&units=metric";
+const weatherApiUrl =
+  "https://api.open-meteo.com/v1/forecast?latitude=0.3476&longitude=32.5825" +
+  "&current=temperature_2m,relative_humidity_2m,weather_code,wind_speed_10m" +
+  "&daily=temperature_2m_max,temperature_2m_min&timezone=Africa%2FKampala&forecast_days=4";
 
-async function fetchWeather(endpoint, apiKey) {
-  const response = await fetch(
-    `${weatherApiBase}/${endpoint}?${locationQuery}&appid=${encodeURIComponent(apiKey)}`,
-  );
+async function fetchWeather() {
+  const response = await fetch(weatherApiUrl);
   if (!response.ok) {
-    throw new Error(`OpenWeatherMap ${endpoint} request failed with status ${response.status}`);
+    throw new Error(`Weather request failed with status ${response.status}`);
   }
   return response.json();
 }
 
-function getLocalDateTime(timestamp, timezoneOffset) {
-  return new Date((timestamp + timezoneOffset) * 1000).toISOString();
+function describeWeatherCode(code) {
+  if (code === 0) return "clear sky";
+  if (code === 1) return "mainly clear";
+  if (code === 2) return "partly cloudy";
+  if (code === 3) return "overcast";
+  if (code === 45 || code === 48) return "fog";
+  if ([51, 53, 55].includes(code)) return "drizzle";
+  if ([56, 57].includes(code)) return "freezing drizzle";
+  if ([61, 63, 65].includes(code)) return "rain";
+  if ([66, 67].includes(code)) return "freezing rain";
+  if ([71, 73, 75, 77].includes(code)) return "snow";
+  if ([80, 81, 82].includes(code)) return "rain showers";
+  if ([85, 86].includes(code)) return "snow showers";
+  if (code === 95) return "thunderstorm";
+  if ([96, 99].includes(code)) return "thunderstorm with hail";
+  return "conditions unavailable";
 }
 
 function renderForecast(forecastData) {
-  const timezoneOffset = forecastData.city.timezone;
-  const today = getLocalDateTime(Date.now() / 1000, timezoneOffset).slice(0, 10);
-  const temperaturesByDate = new Map();
-
-  forecastData.list.forEach((entry) => {
-    const localDate = getLocalDateTime(entry.dt, timezoneOffset).slice(0, 10);
-    if (localDate <= today) {
-      return;
-    }
-
-    const temperatures = temperaturesByDate.get(localDate) ?? {
-      low: entry.main.temp_min,
-      high: entry.main.temp_max,
-    };
-    temperatures.low = Math.min(temperatures.low, entry.main.temp_min);
-    temperatures.high = Math.max(temperatures.high, entry.main.temp_max);
-    temperaturesByDate.set(localDate, temperatures);
-  });
-
-  const forecastDays = [...temperaturesByDate.entries()].slice(0, 3);
-  if (forecastDays.length < 3) {
-    throw new Error("OpenWeatherMap did not return three upcoming forecast days.");
+  const { time, temperature_2m_min: lows, temperature_2m_max: highs } = forecastData.daily;
+  if (time.length < 4 || lows.length < 4 || highs.length < 4) {
+    throw new Error("Weather service did not return three upcoming forecast days.");
   }
 
   forecastOutput.replaceChildren(
-    ...forecastDays.map(([date, temperatures]) => {
+    ...time.slice(1, 4).map((date, index) => {
       const item = document.createElement("li");
       item.className = "forecast-day";
 
@@ -66,10 +61,10 @@ function renderForecast(forecastData) {
 
       const range = document.createElement("span");
       range.className = "forecast-range";
-      range.textContent = `${Math.round(temperatures.low)}° / ${Math.round(temperatures.high)}°C`;
+      range.textContent = `${Math.round(lows[index + 1])}° / ${Math.round(highs[index + 1])}°C`;
       range.setAttribute(
         "aria-label",
-        `Low ${Math.round(temperatures.low)} degrees, high ${Math.round(temperatures.high)} degrees Celsius`,
+        `Low ${Math.round(lows[index + 1])} degrees, high ${Math.round(highs[index + 1])} degrees Celsius`,
       );
 
       item.append(dateLabel, range);
@@ -80,30 +75,21 @@ function renderForecast(forecastData) {
 
 async function loadKampalaWeather() {
   try {
-    const apiKey = window.weatherApiKey;
-    if (!apiKey) {
-      throw new Error("OpenWeatherMap API key is not configured for this local page.");
+    const data = await fetchWeather();
+    const { current } = data;
+    if (!current || !Number.isFinite(current.temperature_2m)) {
+      throw new TypeError("Weather service returned invalid current conditions.");
     }
 
-    const [currentData, forecastData] = await Promise.all([
-      fetchWeather("weather", apiKey),
-      fetchWeather("forecast", apiKey),
-    ]);
-    const currentWeather = currentData.weather[0];
+    temperatureOutput.textContent = `${Math.round(current.temperature_2m)}°C`;
+    descriptionOutput.textContent = describeWeatherCode(current.weather_code);
+    humidityOutput.textContent = `${current.relative_humidity_2m}%`;
+    windOutput.textContent = `${Math.round(current.wind_speed_10m)} km/h`;
+    updatedOutput.textContent = `Updated ${current.time.slice(11, 16)} EAT`;
 
-    temperatureOutput.textContent = `${Math.round(currentData.main.temp)}°C`;
-    descriptionOutput.textContent = currentWeather.description;
-    humidityOutput.textContent = `${currentData.main.humidity}%`;
-    windOutput.textContent = `${Math.round(currentData.wind.speed)} m/s`;
-    updatedOutput.textContent = `Updated ${new Date(currentData.dt * 1000).toLocaleTimeString([], {
-      hour: "2-digit",
-      minute: "2-digit",
-      timeZone: "Africa/Kampala",
-    })} EAT`;
-
-    renderForecast(forecastData);
+    renderForecast(data);
   } catch (error) {
-    console.error("Unable to load Kampala weather.", error);
+    console.error("Unable to load Kampala weather from Open-Meteo.", error);
     temperatureOutput.textContent = "Unavailable";
     descriptionOutput.textContent = "Current weather could not be loaded.";
     humidityOutput.textContent = "—";
