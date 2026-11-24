@@ -6,6 +6,8 @@
     "phone": "+256 700 123 401",
     "website": "https://example.com/acacia",
     "image": "acacia-creative.svg",
+    "coverImage": "https://thumb.wikimedia.org/wikipedia/commons/thumb/2/25/Kampala_City_Carnival_2017.jpg/960px-Kampala_City_Carnival_2017.jpg",
+    "coverAlt": "Kampala City Carnival, an illustrative view of local culture",
     "membershipLevel": 3
   },
   {
@@ -15,6 +17,8 @@
     "phone": "+256 700 123 402",
     "website": "https://example.com/bukoto-market",
     "image": "bukoto-market.svg",
+    "coverImage": "https://thumb.wikimedia.org/wikipedia/commons/thumb/5/53/Nakasero_market_built_in_1927_in_Kampala%2C_Uganda.jpg/960px-Nakasero_market_built_in_1927_in_Kampala%2C_Uganda.jpg",
+    "coverAlt": "Nakasero Market in Kampala, an illustrative local market scene",
     "membershipLevel": 2
   },
   {
@@ -24,6 +28,8 @@
     "phone": "+256 700 123 403",
     "website": "https://example.com/crestline",
     "image": "crestline-services.svg",
+    "coverImage": "https://thumb.wikimedia.org/wikipedia/commons/thumb/1/1a/Kampala_Road%2C_Habitat%2C_Uganda.jpg/960px-Kampala_Road%2C_Habitat%2C_Uganda.jpg",
+    "coverAlt": "Buildings and traffic along a Kampala road, illustrative city context",
     "membershipLevel": 3
   },
   {
@@ -33,6 +39,8 @@
     "phone": "+256 700 123 404",
     "website": "https://example.com/green-path",
     "image": "green-path.svg",
+    "coverImage": "https://thumb.wikimedia.org/wikipedia/commons/thumb/2/25/Kampala_City_Carnival_2017.jpg/960px-Kampala_City_Carnival_2017.jpg",
+    "coverAlt": "Kampala City Carnival, an illustrative view of local community life",
     "membershipLevel": 1
   },
   {
@@ -42,6 +50,8 @@
     "phone": "+256 700 123 405",
     "website": "https://example.com/craft-house",
     "image": "kampala-craft-house.svg",
+    "coverImage": "https://thumb.wikimedia.org/wikipedia/commons/thumb/5/53/Nakasero_market_built_in_1927_in_Kampala%2C_Uganda.jpg/960px-Nakasero_market_built_in_1927_in_Kampala%2C_Uganda.jpg",
+    "coverAlt": "Nakasero Market in Kampala, an illustrative local retail scene",
     "membershipLevel": 1
   },
   {
@@ -51,6 +61,8 @@
     "phone": "+256 700 123 406",
     "website": "https://example.com/lakeview",
     "image": "lakeview-guest-house.svg",
+    "coverImage": "https://upload.wikimedia.org/wikipedia/commons/d/dc/Kampala_Evening_fall.jpg",
+    "coverAlt": "Rainy evening view along Entebbe Road in Kampala",
     "membershipLevel": 2
   },
   {
@@ -60,6 +72,8 @@
     "phone": "+256 700 123 407",
     "website": "https://example.com/pearltech",
     "image": "pearltech-solutions.svg",
+    "coverImage": "https://thumb.wikimedia.org/wikipedia/commons/thumb/1/1a/Kampala_Road%2C_Habitat%2C_Uganda.jpg/960px-Kampala_Road%2C_Habitat%2C_Uganda.jpg",
+    "coverAlt": "Buildings and traffic along a Kampala road, illustrative city context",
     "membershipLevel": 3
   },
   {
@@ -69,6 +83,8 @@
     "phone": "+256 700 123 408",
     "website": "https://example.com/wandegeya-wellness",
     "image": "wandegeya-wellness.svg",
+    "coverImage": "https://thumb.wikimedia.org/wikipedia/commons/thumb/c/ca/Old_taxi_park_Kampala.jpg/960px-Old_taxi_park_Kampala.jpg",
+    "coverAlt": "Kampala's Old Taxi Park, an illustrative city scene",
     "membershipLevel": 2
   }
 ]

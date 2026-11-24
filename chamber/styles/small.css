@@ -522,6 +522,16 @@ h3 {
   transition: transform 180ms ease, box-shadow 180ms ease, border-color 180ms ease;
 }
 
+.member-cover {
+  grid-column: 1 / -1;
+  width: calc(100% + 2.4rem);
+  height: 9rem;
+  margin: -1.2rem -1.2rem -2.35rem;
+  border-radius: 0.85rem 0.85rem 0 0;
+  object-fit: cover;
+  object-position: center 45%;
+}
+
 .member-card:hover {
   transform: translateY(-4px);
   border-color: #c7d7c8;
@@ -529,10 +539,16 @@ h3 {
 }
 
 .member-logo {
-  width: 3.7rem;
+  position: relative;
+  z-index: 1;
+  width: 4.4rem;
   aspect-ratio: 1;
-  border-radius: 0.75rem;
+  padding: 0.2rem;
+  border: 3px solid #fff;
+  border-radius: 1rem;
+  background: #fff;
   object-fit: cover;
+  box-shadow: 0 0.25rem 0.75rem rgb(24 52 41 / 16%);
 }
 
 .member-heading {
@@ -635,6 +651,10 @@ h3 {
   display: none;
 }
 
+.member-grid.is-list .member-cover {
+  display: none;
+}
+
 .member-grid.is-list .member-heading {
   grid-column: 1;
   grid-row: 1;
@@ -664,6 +684,38 @@ h3 {
   border: 1px solid var(--color-border);
   border-radius: 0.45rem;
   background: var(--color-surface);
+}
+
+.photo-attributions {
+  margin-top: 1.25rem;
+  padding: 0.9rem 1rem;
+  border: 1px solid var(--color-border);
+  border-radius: 0.55rem;
+  background: #fff;
+  color: var(--color-muted-text);
+  font-size: 0.82rem;
+}
+
+.photo-attributions summary {
+  color: var(--color-primary-dark);
+  font-weight: 800;
+  cursor: pointer;
+}
+
+.photo-attributions p {
+  margin: 0.7rem 0 0.4rem;
+}
+
+.photo-attributions ul {
+  display: grid;
+  gap: 0.35rem;
+  margin: 0;
+  padding-left: 1.2rem;
+}
+
+.photo-attributions a {
+  color: #245c43;
+  text-underline-offset: 0.15em;
 }
 
 .membership-banner {

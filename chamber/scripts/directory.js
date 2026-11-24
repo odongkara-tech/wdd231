@@ -53,6 +53,15 @@ const renderMembers = () => {
     const card = document.createElement("article");
     card.className = "member-card";
 
+    const cover = document.createElement("img");
+    cover.className = "member-cover";
+    cover.src = member.coverImage;
+    cover.alt = member.coverAlt;
+    cover.width = 800;
+    cover.height = 450;
+    cover.loading = "lazy";
+    cover.decoding = "async";
+
     const logo = document.createElement("img");
     logo.className = "member-logo";
     logo.src = `images/${member.image}`;
@@ -87,7 +96,7 @@ const renderMembers = () => {
       ),
     );
 
-    card.append(logo, heading, membership, details);
+    card.append(cover, logo, heading, membership, details);
     return card;
   }));
 };
