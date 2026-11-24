@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Week 4 practice examples demonstrating CSS animations, transforms, transitions, and reduced-motion support.">
+    <meta name="author" content="Ronald Odongkara">
+    <link rel="stylesheet" href="styles/animations.css">
+    <title>CSS Animations and Transitions | WDD 231</title>
+  </head>
+  <body>
+    <header class="page-header">
+      <a href="../index.html">WDD 231 Home</a>
+      <p>Week 4 Learning Activity</p>
+    </header>
+    <main>
+      <h1>CSS Animations and Transitions</h1>
+      <p class="intro">Compare a continuously animated loader with a loader that moves when you interact with it.</p>
+
+      <section class="demo-grid" aria-label="CSS motion examples">
+        <article class="demo-card">
+          <h2>Keyframes animation</h2>
+          <p>The ring rotates and the gear gently pulses continuously.</p>
+          <div class="demo-stage">
+            <div class="loader" aria-hidden="true"></div>
+          </div>
+          <p class="hint">The motion runs automatically.</p>
+        </article>
+
+        <article class="demo-card">
+          <h2>Hover transition</h2>
+          <p>Hover over the loader or focus it with your keyboard to rotate the ring and reveal the gear.</p>
+          <div class="demo-stage">
+            <div class="loader-t" tabindex="0" role="img" aria-label="Interactive loader. Hover or focus to animate." ></div>
+          </div>
+          <p class="hint">The transition runs when the interaction starts and reverses when it ends.</p>
+        </article>
+      </section>
+
+      <p class="back-link"><a href="../index.html">Return to the course homepage</a></p>
+      <p><a href="advanced-forms.html">Continue to the Advanced Forms activity</a></p>
+    </main>
+  </body>
+</html>
