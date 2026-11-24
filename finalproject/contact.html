@@ -1,0 +1,61 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Request a portrait, documentary assignment, print, or collaboration with Frames of Kampala.">
+  <meta name="author" content="Ronald Odongkara">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Contact the Photographer | Frames of Kampala">
+  <meta property="og:description" content="Start a portrait, editorial, event, or print inquiry.">
+  <meta property="og:image" content="https://odongkara-tech.github.io/wdd231/finalproject/images/hero.svg">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="icon" href="images/favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="styles/base.css">
+  <script type="module" src="scripts/site-navigation.js"></script>
+  <script type="module" src="scripts/contact.js"></script>
+  <title>Contact the Photographer | Frames of Kampala</title>
+</head>
+<body>
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+  <header class="site-header">
+    <a class="brand" href="index.html" aria-label="Frames of Kampala home"><span class="brand-mark" aria-hidden="true">FK</span><span>Frames of Kampala</span></a>
+    <button class="menu-toggle" type="button" aria-label="Open navigation menu" aria-expanded="false" aria-controls="site-nav"><span class="menu-icon" aria-hidden="true"></span></button>
+    <nav class="site-nav" id="site-nav" aria-label="Main navigation">
+      <a href="index.html">Home</a>
+      <a href="gallery.html">Gallery</a>
+      <a href="contact.html" aria-current="page">Contact</a>
+    </nav>
+  </header>
+  <main id="main-content">
+    <section class="section container" aria-labelledby="contact-heading">
+      <p class="eyebrow">Let’s make something honest</p>
+      <h1 class="page-heading" id="contact-heading">Start a project</h1>
+      <p class="intro">Send a portrait, editorial, event, print, or collaboration inquiry.</p>
+      <form class="form" id="project-form" action="response.html" method="get">
+        <label class="field" for="name">Name<input id="name" name="name" type="text" autocomplete="name" required></label>
+        <label class="field" for="email">Email<input id="email" name="email" type="email" autocomplete="email" required></label>
+        <label class="field" for="project-type">Project type
+          <select id="project-type" name="project-type" required>
+            <option value="">Choose one</option>
+            <option>Portrait</option>
+            <option>Editorial story</option>
+            <option>Event coverage</option>
+            <option>Print inquiry</option>
+          </select>
+        </label>
+        <label class="field" for="location">Location<input id="location" name="location" type="text" autocomplete="address-level2" required></label>
+        <label class="field" for="details">Project details<textarea id="details" name="details" required></textarea></label>
+        <label class="checkbox" for="updates"><input id="updates" name="updates" type="checkbox" value="yes"> <span>Send me occasional portfolio updates.</span></label>
+        <button class="button" type="submit">Send inquiry</button>
+      </form>
+      <p class="status" id="form-status" aria-live="polite"></p>
+    </section>
+  </main>
+  <footer class="site-footer">
+    <p>&copy; <span id="current-year"></span> Frames of Kampala</p>
+    <p><a href="attributions.html">Attributions</a></p>
+    <p>WDD 231 final project</p>
+  </footer>
+</body>
+</html>

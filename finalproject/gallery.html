@@ -1,0 +1,64 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Browse documentary photographs by location, category, year, and favorite status in the Frames of Kampala gallery.">
+  <meta name="author" content="Ronald Odongkara">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Photo Gallery | Frames of Kampala">
+  <meta property="og:description" content="Explore documentary photographs from Kampala and across Uganda.">
+  <meta property="og:image" content="https://odongkara-tech.github.io/wdd231/finalproject/images/hero.svg">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="icon" href="images/favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="styles/base.css">
+  <script type="module" src="scripts/site-navigation.js"></script>
+  <script type="module" src="scripts/gallery.js"></script>
+  <title>Photo Gallery | Frames of Kampala</title>
+</head>
+<body>
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+  <header class="site-header">
+    <a class="brand" href="index.html" aria-label="Frames of Kampala home"><span class="brand-mark" aria-hidden="true">FK</span><span>Frames of Kampala</span></a>
+    <button class="menu-toggle" type="button" aria-label="Open navigation menu" aria-expanded="false" aria-controls="site-nav"><span class="menu-icon" aria-hidden="true"></span></button>
+    <nav class="site-nav" id="site-nav" aria-label="Main navigation">
+      <a href="index.html">Home</a>
+      <a href="gallery.html" aria-current="page">Gallery</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+  </header>
+  <main id="main-content">
+    <section class="section container" aria-labelledby="gallery-heading">
+      <p class="eyebrow">Selected work</p>
+      <h1 class="page-heading" id="gallery-heading">Photo gallery</h1>
+      <p class="intro">Browse 18 documentary photographs. Open a frame for details or save favorites on this device.</p>
+      <div class="gallery-toolbar" role="group" aria-label="Filter photographs">
+        <button class="filter-button" type="button" data-category="all" aria-pressed="true">All</button>
+        <button class="filter-button" type="button" data-category="portrait" aria-pressed="false">Portrait</button>
+        <button class="filter-button" type="button" data-category="street" aria-pressed="false">Street</button>
+        <button class="filter-button" type="button" data-category="landscape" aria-pressed="false">Landscape</button>
+        <button class="filter-button" type="button" data-category="people" aria-pressed="false">People</button>
+        <button class="filter-button" type="button" data-category="favorites" aria-pressed="false">Favorites</button>
+      </div>
+      <p class="status" id="gallery-status" aria-live="polite">Loading photographs…</p>
+      <div class="gallery-grid" id="gallery-grid"></div>
+    </section>
+  </main>
+  <dialog class="dialog" id="photo-dialog" aria-labelledby="dialog-title">
+    <div class="dialog-content">
+      <button class="dialog-close" id="dialog-close" type="button" aria-label="Close photograph details">×</button>
+      <img id="dialog-image" src="images/hero.svg" alt="" width="900" height="675">
+      <div class="dialog-copy">
+        <h2 id="dialog-title"></h2>
+        <p class="photo-meta" id="dialog-meta"></p>
+        <p id="dialog-description"></p>
+      </div>
+    </div>
+  </dialog>
+  <footer class="site-footer">
+    <p>&copy; <span id="current-year"></span> Frames of Kampala</p>
+    <p><a href="attributions.html">Attributions</a></p>
+    <p>WDD 231 final project</p>
+  </footer>
+</body>
+</html>
