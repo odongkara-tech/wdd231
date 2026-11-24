@@ -170,7 +170,7 @@
   min-height: 2.5rem;
   align-items: center;
   gap: 0.35rem;
-  color: #245c43;
+  color: #294b78;
   font-size: 0.82rem;
   font-weight: 800;
   text-underline-offset: 0.18em;
@@ -196,7 +196,7 @@
 }
 
 .membership-dialog::backdrop {
-  background: rgb(12 46 41 / 70%);
+  background: rgb(20 40 75 / 70%);
   backdrop-filter: blur(2px);
 }
 
@@ -209,7 +209,7 @@
 
 .dialog-heading .eyebrow {
   margin: 0;
-  color: #456f48;
+  color: #72500b;
 }
 
 .membership-dialog h2 {
@@ -237,7 +237,7 @@
   place-items: center;
   border: 1px solid var(--color-border);
   border-radius: 50%;
-  background: #edf3ed;
+  background: #eeece6;
   color: var(--color-primary-dark);
   font-size: 1.5rem;
   cursor: pointer;

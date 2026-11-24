@@ -6,7 +6,7 @@
   overflow: hidden;
   border: 1px solid rgb(255 255 255 / 18%);
   border-radius: 1rem;
-  background: #0c2e29;
+  background: #14284b;
   box-shadow: 0 1.5rem 4rem rgb(0 0 0 / 22%);
 }
 
@@ -74,8 +74,8 @@
   aspect-ratio: 1;
   place-items: center;
   border-radius: 50%;
-  background: #edf3ed;
-  color: #24674f;
+  background: #eeece6;
+  color: #294b78;
   font-size: 1.25rem;
 }
 
@@ -107,8 +107,8 @@
   justify-items: center;
   padding: 0.45rem 0.25rem;
   border-radius: 0.55rem;
-  background: #edf3ed;
-  color: #24674f;
+  background: #eeece6;
+  color: #294b78;
   font-size: 0.72rem;
   font-weight: 800;
   text-transform: uppercase;
@@ -145,13 +145,13 @@
 .weather-panel {
   color: #fff;
   background:
-    radial-gradient(circle at 100% 0, rgb(216 243 106 / 18%), transparent 14rem),
-    linear-gradient(145deg, #123c35, #1d5b48);
+    radial-gradient(circle at 100% 0, rgb(242 181 68 / 18%), transparent 14rem),
+    linear-gradient(145deg, #14284b, #294b78);
   border-color: transparent;
 }
 
 .weather-panel .eyebrow {
-  color: #d8f36a;
+  color: #ffd77a;
 }
 
 .weather-panel .section-heading h2 {
@@ -160,7 +160,7 @@
 
 .weather-icon {
   background: rgb(255 255 255 / 13%);
-  color: #e3f7a3;
+  color: #ffd77a;
   font-size: 1.55rem;
 }
 
@@ -264,7 +264,7 @@
 }
 
 .section-link {
-  color: #24674f;
+  color: #294b78;
   font-size: 0.88rem;
   font-weight: 800;
   text-underline-offset: 0.2em;
@@ -306,7 +306,7 @@
 
 .spotlight-category {
   margin: 0 0 0.25rem;
-  color: #456f48;
+  color: #72500b;
   font-size: 0.7rem;
   font-weight: 800;
   letter-spacing: 0.08em;
@@ -369,7 +369,7 @@
 }
 
 .spotlight-details a {
-  color: #24674f;
+  color: #294b78;
   font-weight: 700;
   text-underline-offset: 0.15em;
 }
