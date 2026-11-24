@@ -5,6 +5,7 @@ const dialogImage = document.querySelector("#dialog-image");
 const dialogTitle = document.querySelector("#dialog-title");
 const dialogMeta = document.querySelector("#dialog-meta");
 const dialogDescription = document.querySelector("#dialog-description");
+const dialogCredit = document.querySelector("#dialog-credit");
 const closeDialog = document.querySelector("#dialog-close");
 
 let photographs = [];
@@ -33,8 +34,24 @@ function openPhoto(photo) {
   dialogImage.src = photo.image;
   dialogImage.alt = photo.title;
   dialogTitle.textContent = photo.title;
-  dialogMeta.textContent = `${photo.location} · ${photo.year} · ${photo.camera}`;
+  dialogMeta.textContent = `${photo.location} · ${photo.year}${photo.camera ? ` · ${photo.camera}` : ""}`;
   dialogDescription.textContent = photo.description;
+  dialogCredit.replaceChildren();
+  if (photo.source && photo.photographer && photo.license && photo.licenseUrl) {
+    const sourceLink = document.createElement("a");
+    sourceLink.href = photo.source;
+    sourceLink.target = "_blank";
+    sourceLink.rel = "noopener noreferrer";
+    sourceLink.textContent = `Photo: ${photo.photographer}`;
+
+    const licenseLink = document.createElement("a");
+    licenseLink.href = photo.licenseUrl;
+    licenseLink.target = "_blank";
+    licenseLink.rel = "noopener noreferrer";
+    licenseLink.textContent = photo.license;
+
+    dialogCredit.append(sourceLink, document.createTextNode(" · "), licenseLink);
+  }
   dialog.showModal();
 }
 
@@ -50,8 +67,8 @@ function createPhotoCard(photo) {
   image.src = photo.image;
   image.alt = photo.description;
   image.loading = "lazy";
-  image.width = 900;
-  image.height = 675;
+  image.width = photo.width ?? 900;
+  image.height = photo.height ?? 675;
 
   const copy = document.createElement("div");
   copy.className = "photo-copy";
@@ -60,10 +77,28 @@ function createPhotoCard(photo) {
   const meta = document.createElement("p");
   meta.className = "photo-meta";
   meta.textContent = `${photo.location} · ${photo.category} · ${photo.year}`;
+  const credit = document.createElement("p");
+  credit.className = "photo-credit";
+  if (photo.source && photo.photographer && photo.license && photo.licenseUrl) {
+    const sourceLink = document.createElement("a");
+    sourceLink.href = photo.source;
+    sourceLink.target = "_blank";
+    sourceLink.rel = "noopener noreferrer";
+    sourceLink.textContent = `Photo: ${photo.photographer}`;
+
+    const licenseLink = document.createElement("a");
+    licenseLink.href = photo.licenseUrl;
+    licenseLink.target = "_blank";
+    licenseLink.rel = "noopener noreferrer";
+    licenseLink.textContent = photo.license;
+
+    credit.append(sourceLink, document.createTextNode(" · "), licenseLink);
+  }
 
   openButton.append(image);
   openButton.addEventListener("click", () => openPhoto(photo));
   copy.append(title, meta);
+  if (credit.hasChildNodes()) copy.append(credit);
 
   const favorites = getFavorites();
   const favoriteButton = document.createElement("button");
