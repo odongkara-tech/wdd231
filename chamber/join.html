@@ -103,7 +103,7 @@
               </label>
               <label class="form-field">
                 <span>Membership level</span>
-                <select name="membership" title="Choose a Chamber membership level." required>
+                <select name="membership" title="Choose a Chamber membership level." autocomplete="off" required>
                   <option value="">Select a membership level</option>
                   <option value="np">NP Membership — no fee</option>
                   <option value="bronze">Bronze Membership</option>
@@ -113,10 +113,10 @@
               </label>
               <label class="form-field form-field-wide">
                 <span>Business or organization description</span>
-                <textarea name="description" title="Tell us what your organization does." rows="5"></textarea>
+                <textarea name="description" title="Tell us what your organization does." autocomplete="off" rows="5"></textarea>
               </label>
             </div>
-            <input type="hidden" name="timestamp" id="timestamp">
+            <input type="hidden" name="timestamp" id="timestamp" title="Form load timestamp.">
             <p class="form-note"><span aria-hidden="true">*</span> Required fields</p>
             <input class="button button-light join-submit" type="submit" value="Submit membership application">
           </form>
