@@ -1,6 +1,5 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 120">
-  <rect width="120" height="120" rx="22" fill="#dff0e6"/>
-  <path d="M60 88V47m0 22C43 69 34 58 34 44c15 0 26 8 26 25Zm0-10c0-16 10-27 26-28 0 16-10 28-26 28Z" fill="#3c8059"/>
-  <path d="M31 88h58" stroke="#a9c77a" stroke-linecap="round" stroke-width="5"/>
-  <text x="60" y="106" fill="#245136" font-family="Arial,sans-serif" font-size="9" font-weight="700" letter-spacing="1.2" text-anchor="middle">GREEN PATH</text>
+<svg xmlns="http://www.w3.org/2000/svg" width="104" height="104" viewBox="0 0 96 96" role="img" aria-label="Green Path Community Foundation logo">
+  <circle cx="48" cy="48" r="46" fill="#2F7D3E"/>
+  <path d="M36 82 C72 68 24 56 52 42" fill="none" stroke="#fff" stroke-width="8" stroke-linecap="round"/>
+  <circle cx="54" cy="26" r="8" fill="#F2C94C"/>
 </svg>
